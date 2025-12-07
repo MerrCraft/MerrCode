@@ -43,12 +43,12 @@ let messages = defineMessages({
         id: 'gui.costumeTab.addBackdropFromLibrary'
     },
     addLibraryCostumeMsg: {
-        defaultMessage: 'Choose a Costume',
+        defaultMessage: 'Choose a Costume from the library',
         description: 'Button to add a costume in the editor tab',
         id: 'gui.costumeTab.addCostumeFromLibrary'
     },
     addBlankCostumeMsg: {
-        defaultMessage: 'Paint',
+        defaultMessage: 'Paint a costume',
         description: 'Button to add a blank costume in the editor tab',
         id: 'gui.costumeTab.addBlankCostume'
     },
