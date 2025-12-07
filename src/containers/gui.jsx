@@ -41,10 +41,17 @@ import cloudManagerHOC from '../lib/cloud-manager-hoc.jsx';
 import TWFullScreenResizerHOC from '../lib/tw-fullscreen-resizer-hoc.jsx';
 
 import GUIComponent from '../components/gui/gui.jsx';
+import Modal from '../components/modal/modal.jsx';
 import HomeCommunication from './home-communication.jsx';
 import {setIsScratchDesktop} from '../lib/isScratchDesktop.js';
 
 class GUI extends React.Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            showModal: true
+        };
+    }
     componentDidMount () {
         setIsScratchDesktop(this.props.isScratchDesktop);
         this.props.onStorageInit(storage);
@@ -95,6 +102,19 @@ class GUI extends React.Component {
             >
                 {children}
             </GUIComponent>
+            
+            {this.state.showModal && (
+                // Welcome Modal
+                <Modal
+                    contentLabel="MerrCode"
+                    onRequestClose={() => this.setState({ showModal: false })}
+                    styleContent={ {width: "700px"} }
+                >
+                    <div style={{ padding: '20px', "backgroundColor":"rgba(255, 255, 255, 0.7)"}}>
+                        Welcome to MerrCode! This is a customized version of Scratch designed for amazing things. Enjoy coding!
+                    </div>
+                </Modal>
+            )}
             
             <HomeCommunication
                 projectId={projectId}
