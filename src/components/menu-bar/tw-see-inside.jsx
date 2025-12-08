@@ -9,7 +9,9 @@ import styles from './tw-see-inside.css';
 
 const SeeInsideButton = ({
     className,
-    onClick
+    onClick,
+    children,
+    iconSrc
 }) => (
     <Button
         className={classNames(
@@ -17,16 +19,18 @@ const SeeInsideButton = ({
             styles.seeInsideButton
         )}
         iconClassName={styles.seeInsideButtonIcon}
-        iconSrc={communityIcon}
+        iconSrc={iconSrc || communityIcon}
         iconWidth="20"
         iconHeight="20"
         onClick={onClick}
     >
-        <FormattedMessage
-            defaultMessage="See inside"
-            description="Label for see inside button"
-            id="tw.menuBar.seeInside"
-        />
+        {children || (
+            <FormattedMessage
+                defaultMessage="See inside"
+                description="Label for see inside button"
+                id="tw.menuBar.seeInside"
+            />
+        )}
     </Button>
 );
 

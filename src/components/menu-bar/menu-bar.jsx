@@ -83,6 +83,7 @@ import scratchLogo from './scratch-logo.svg';
 import sharedMessages from '../../lib/shared-messages';
 
 import SeeInsideButton from './tw-see-inside.jsx';
+import fileUploadIcon from '../action-menu/icon--file-upload.svg';
 import { notScratchDesktop } from '../../lib/isScratchDesktop.js';
 
 import { downloadLogs } from '../../lib/pm-log-capture.js';
@@ -95,7 +96,7 @@ const ariaMessages = defineMessages({
     },
     tutorials: {
         id: 'gui.menuBar.tutorialsLibrary',
-        defaultMessage: 'Tutorials',
+        defaultMessage: 'Tutorial',
         description: 'accessibility text for the tutorials button'
     }
 });
@@ -521,6 +522,7 @@ class MenuBar extends React.Component {
                                     height="24"
                                     draggable={false}
                                 />
+                                Theme
                             </div>
                         )}
                         {/* tw: display compile errors */}
@@ -944,22 +946,14 @@ class MenuBar extends React.Component {
                             />)
                             : (null)}
                     </div>
-                    <div className={styles.menuBarItem}>
-                        <a
-                            className={styles.feedbackLink}
-                            href="https://penguinmod.com"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <Button className={styles.feedbackButton}>
-                                <FormattedMessage
-                                    defaultMessage="Back to Home"
-                                    description="Button to go back to the home page"
-                                    id="pm.backToHomeButton"
-                                />
-                            </Button>
-                        </a>
+                    <div className={classNames(styles.menuBarItem)}>
+                        {this.props.onOpenTutorial ? (
+                            <SeeInsideButton className={styles.menuBarButton} onClick={this.props.onOpenTutorial} iconSrc={fileUploadIcon}>
+                                <FormattedMessage {...ariaMessages.tutorials} />
+                            </SeeInsideButton>
+                        ) : null}
                     </div>
+
                 </div>
 
                 <div className={styles.accountInfoGroup}>
@@ -1026,6 +1020,7 @@ MenuBar.propTypes = {
     onClickAddonSettings: PropTypes.func,
     onClickTheme: PropTypes.func,
     onClickPackager: PropTypes.func,
+    onOpenTutorial: PropTypes.func,
     onClickRestorePoints: PropTypes.func,
     onClickEdit: PropTypes.func,
     onClickFile: PropTypes.func,

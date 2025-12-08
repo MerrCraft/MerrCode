@@ -30,6 +30,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: $text-primary-light;
     overflow: hidden;
+    background-color:white;
 }
 
 .modal-content.full-screen {

@@ -43,6 +43,8 @@ import TWCustomExtensionModal from '../../containers/tw-custom-extension-modal.j
 import TWRestorePointManager from '../../containers/tw-restore-point-manager.jsx';
 import TWFontsModal from '../../containers/tw-fonts-modal.jsx';
 import PMExtensionModals from '../../containers/pm-extension-modals.jsx';
+import Tutorial from '../tutorial/tutorial.jsx';
+import Button from '../button/button.jsx';
 
 import layout, {STAGE_SIZE_MODES} from '../../lib/layout-constants';
 import {resolveStageSize} from '../../lib/screen-utils';
@@ -68,6 +70,12 @@ const messages = defineMessages({
         id: 'gui.gui.addExtension',
         description: 'Button to add an extension in the target pane',
         defaultMessage: 'Add Extension'
+    }
+    ,
+    tutorialButton: {
+        id: 'gui.gui.tutorial',
+        description: 'Button to open the tutorial',
+        defaultMessage: 'Tutorial'
     }
 });
 
@@ -181,6 +189,22 @@ const GUIComponent = props => {
         vm,
         ...componentProps
     } = omit(props, 'dispatch');
+    const [showTutorial, setShowTutorial] = React.useState(() => {
+        try {
+            return !localStorage.getItem('merrcode_tutorial_shown');
+        } catch (e) {
+            return false;
+        }
+    });
+    const openTutorial = () => setShowTutorial(true);
+    const closeTutorial = () => {
+        try {
+            localStorage.setItem('merrcode_tutorial_shown', '1');
+        } catch (e) {
+            // ignore
+        }
+        setShowTutorial(false);
+    };
     if (children) {
         return <Box {...componentProps}>{children}</Box>;
     }
@@ -436,6 +460,10 @@ const GUIComponent = props => {
                 {isBrowserSupported() ? null : (
                     <BrowserModal isRtl={isRtl} />
                 )}
+                <Tutorial
+                    open={showTutorial}
+                    onClose={closeTutorial}
+                />
                 {tipsLibraryVisible ? (
                     <TipsLibrary />
                 ) : null}
@@ -489,6 +517,7 @@ const GUIComponent = props => {
                         onClickNewWindow={onClickNewWindow}
                         onClickTheme={onClickTheme}
                         onClickPackager={onClickPackager}
+                        onOpenTutorial={openTutorial}
                         onClickLogo={onClickLogo}
                         onCloseAccountNav={onCloseAccountNav}
                         onLogOut={onLogOut}

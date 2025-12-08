@@ -111,10 +111,19 @@ class GUI extends React.Component {
                     styleContent={ {width: "700px"} }
                 >
                     <div style={{ padding: '20px', "backgroundColor":"rgba(255, 255, 255, 0.7)"}}>
-                        Welcome to MerrCode! This is a customized version of Scratch designed for amazing things. Enjoy coding!
+                        <p>Welcome to MerrCode!</p>
+                        <p>This is a mod of PenguinMod that is a mod of Turbowarp Which is a mod of Scratch.</p>
+                        <p>MerrCode adds features such as:</p>
+                        <ul>
+                            <li>Extra UI</li>
+                            <li>Extra Features</li>
+                            <li>And More!</li>
+                        </ul>
+                        <i>Enjoy coding! :3</i>
                     </div>
                 </Modal>
             )}
+            
             
             <HomeCommunication
                 projectId={projectId}
