@@ -304,7 +304,7 @@ const GUIComponent = props => {
                 <FormattedMessage
                     defaultMessage="Variables"
                     description="Button to get to the variables panel"
-                    id="gui.gui.variablesTab"
+                    id="pm.gui.variablesTab"
                 />
             </ContextMenuWrapTab>
         </Tab>);
@@ -317,7 +317,7 @@ const GUIComponent = props => {
                 <FormattedMessage
                     defaultMessage="Files"
                     description="Button to get to the files panel"
-                    id="gui.gui.filesTab"
+                    id="pm.gui.filesTab"
                 />
             </ContextMenuWrapTab>
         </Tab>);
@@ -454,7 +454,7 @@ const GUIComponent = props => {
                 {isCreating ? (
                     <Loader
                         isFullScreen
-                        messageId={isPlayground ? "gui.loader.playground" : "gui.loader.creating"}
+                        messageId={isPlayground ? "pm.loader.playground" : "gui.loader.creating"}
                     />
                 ) : null}
                 {isBrowserSupported() ? null : (
@@ -606,7 +606,7 @@ const GUIComponent = props => {
                                                 <FormattedMessage
                                                     defaultMessage="Variables"
                                                     description="Button to get to the variables panel"
-                                                    id="gui.gui.variablesTab"
+                                                    id="pm.gui.variablesTab"
                                                 />
                                             </div>
                                         </MenuItem>}
@@ -619,7 +619,7 @@ const GUIComponent = props => {
                                                 <FormattedMessage
                                                     defaultMessage="Files"
                                                     description="Button to get to the files panel"
-                                                    id="gui.gui.filesTab"
+                                                    id="pm.gui.filesTab"
                                                 />
                                             </div>
                                         </MenuItem>} */}
