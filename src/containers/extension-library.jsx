@@ -50,6 +50,7 @@ const TRUSTED_LOADEXT_ORIGINS = [
     'https://sharkpools-extensions.vercel.app',
     'https://raw.githubusercontent.com/SharkPool-SP/SharkPools-Extensions/main', // Some people can't connect to vercel
     'https://pen-group.github.io',
+    'https://merrcode.catbox.co'
 ];
 
 class ExtensionLibrary extends React.PureComponent {

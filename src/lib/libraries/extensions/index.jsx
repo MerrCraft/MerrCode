@@ -271,6 +271,14 @@ const menuItems = [
         featured: true
     },
     {
+        name: 'CST-3D',
+        extensionId: 'https://merrcode.catbox.co/cst-3d.js',
+        iconURL: jg3dInsetExtensionIcon,
+        tags: ['scratch'],
+        description: 'Easily do 3D in your projects. (this extensionwas hard to obtain)',
+        featured: true
+    },
+    {
         name: (
             <FormattedMessage
                 defaultMessage="Text to Speech"
