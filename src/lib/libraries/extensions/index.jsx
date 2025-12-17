@@ -109,7 +109,7 @@ import cursorThumb from './penguinmod/extensions/cursor.svg';
 // LilyMakesThings 🙏
 import lilyTempVariablesExtensionIcon from './penguinmod/orgtw/TempVariables2.svg';
 
-// more icons so they arent just red when the extension color is not red
+// More icons so they arent just red when the extension color is not red
 import gsaTempVariablesExtensionIcon from './penguinmod/extensions/tempvariables.svg';
 import jgIframeExtensionIcon from './penguinmod/extensions/iframe.png';
 import jgExtendedAudioExtensionIcon from './penguinmod/extensions/extendedaudio.png';
@@ -125,6 +125,7 @@ import spJSONExtensionIcon from './penguinmod/extensions/sp_json.svg';
 import jgsilvxrcatInterfacesExtensionIcon from './penguinmod/extensions/interfaces2.png';
 
 // 3D MAN WTF
+// CST better. I also found another using Three.js, but might be better.
 import jg3dExtensionIcon from './penguinmod/extensions/3d.png';
 import jg3dInsetExtensionIcon from './penguinmod/extensions/3dicon.png';
 import jg3dVrExtensionIcon from './penguinmod/extensions/3dVr.png';
@@ -272,11 +273,23 @@ const menuItems = [
     },
     {
         name: 'CST-3D',
-        extensionId: 'https://merrcode.catbox.co/cst-3d.js',
+        extensionId: 'https://raw.githubusercontent.com/CST1229/turbowarp-extensions/3d/extensions/CST1229/3d.js',
         iconURL: jg3dInsetExtensionIcon,
-        tags: ['scratch'],
+        tags: ['turbowarp', '3d', 'graphics'],
         description: 'Easily do 3D in your projects. (this extensionwas hard to obtain)',
-        featured: true
+        credits: 'By: CST1229',
+        featured: true,
+        _unsandboxed: true
+    },
+    {
+        name: 'Extra 3D',
+        extensionId: 'https://civ3ro.github.io/extensions/threejsD.js',
+        iconURL: jg3dExtensionIcon,
+        tags: ['turbowarp', 'graphics'],
+        description: 'Create 3D objects and experiences using Three.js.',
+        credits: 'By: Civero',
+        featured: true,
+        _unsandboxed: true
     },
     {
         name: (

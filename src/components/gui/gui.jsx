@@ -60,6 +60,8 @@ import soundsIcon from './icon--sounds.svg';
 import variablesIcon from './icon--variables.svg';
 import filesIcon from './icon--files.svg';
 
+
+
 const urlParams = new URLSearchParams(location.search);
 
 const IsLocal = String(window.location.href).startsWith(`http://localhost:`);

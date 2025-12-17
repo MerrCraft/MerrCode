@@ -44,7 +44,6 @@ import GUIComponent from '../components/gui/gui.jsx';
 import Modal from '../components/modal/modal.jsx';
 import HomeCommunication from './home-communication.jsx';
 import {setIsScratchDesktop} from '../lib/isScratchDesktop.js';
-
 class GUI extends React.Component {
     constructor (props) {
         super(props);
@@ -112,6 +111,7 @@ class GUI extends React.Component {
                 >
                     <div style={{ padding: '20px', "backgroundColor":"rgba(255, 255, 255, 0.7)"}}>
                         <h1>Welcome to MerrCode!</h1>
+                        <p>HAPPY CHRISTMAS</p>
                         <p>This is a mod of PenguinMod that is a mod of Turbowarp Which is a mod of Scratch.</p>
                         <p>MerrCode adds features such as:</p>
                         <ul>

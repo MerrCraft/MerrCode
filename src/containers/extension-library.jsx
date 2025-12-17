@@ -48,7 +48,7 @@ const TRUSTED_LOADEXT_ORIGINS = [
     'https://studio.penguinmod.com', // for development
     'https://extensions.penguinmod.com',
     'https://sharkpools-extensions.vercel.app',
-    'https://raw.githubusercontent.com/SharkPool-SP/SharkPools-Extensions/main', // Some people can't connect to vercel
+    'https://raw.githubusercontent.com', // Some people can't connect to vercel and for CST-3D
     'https://pen-group.github.io',
     'https://merrcode.catbox.co'
 ];
@@ -174,6 +174,8 @@ class ExtensionLibrary extends React.PureComponent {
         const url = (item.extensionURL ? item.extensionURL : extensionId);
         if (item._unsandboxed) {
             if (url.startsWith("data:")) {
+                manuallyTrustExtension(url);
+            } else if (url.includes('https://raw.githubusercontent.com')) {
                 manuallyTrustExtension(url);
             } else {
                 await this.props.vm.securityManager.canLoadExtensionFromProject(url);
