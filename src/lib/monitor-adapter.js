@@ -27,8 +27,14 @@ export default function ({id, spriteName, opcode, params, value, vm}) {
         label = `${spriteName}: ${label}`;
     }
 
+    // Parse null to a string
     if (value === null) {
         value = 'null';
+    }
+
+    // Parse undefined to a string
+    if (isUndefined(value)) {
+        value = 'undefined';
     }
 
     // If value is a number, round it to six decimal places
