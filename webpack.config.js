@@ -168,31 +168,31 @@ module.exports = [
             }),
             new HtmlWebpackPlugin({
                 chunks: ['editor'], template: 'src/playground/index.ejs', filename: 'editor.html',
-                title: 'PenguinMod - Editor', ...htmlWebpackPluginCommon
+                title: 'MerrCode - Editor', ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['playground'], template: 'src/playground/index.ejs', filename: 'playground.html',
-                title: 'PenguinMod - Playground', ...htmlWebpackPluginCommon
+                title: 'MerrCode - Playground', ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['player'], template: 'src/playground/index.ejs', filename: 'index.html',
-                title: 'PenguinMod - A mod of TurboWarp', ...htmlWebpackPluginCommon
+                title: 'MerrCode - A mod of TurboWarp', ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['fullscreen'], template: 'src/playground/index.ejs', filename: 'fullscreen.html',
-                title: 'PenguinMod - A mod of TurboWarp', ...htmlWebpackPluginCommon
+                title: 'MerrCode - A mod of TurboWarp', ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['embed'], template: 'src/playground/index.ejs', filename: 'embed.html',
-                title: 'Embedded Project - PenguinMod', noTheme: true, ...htmlWebpackPluginCommon
+                title: 'Embedded Project - MerrCode', noTheme: true, ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['addon-settings'], template: 'src/playground/simple.ejs', filename: 'addons.html',
-                title: 'Addon Settings - PenguinMod', ...htmlWebpackPluginCommon
+                title: 'Addon Settings - MerrCode', ...htmlWebpackPluginCommon
             }),
             new HtmlWebpackPlugin({
                 chunks: ['credits'], template: 'src/playground/simple.ejs', filename: 'credits.html',
-                title: 'PenguinMod & TurboWarp Credits', noSplash: true, ...htmlWebpackPluginCommon
+                title: 'MerrCode & TurboWarp Credits', noSplash: true, ...htmlWebpackPluginCommon
             }),
             new CopyWebpackPlugin({ patterns: [{ from: 'static', to: '' }] }),
             new CopyWebpackPlugin({ patterns: [{ from: 'node_modules/scratch-blocks/media', to: 'static/blocks-media' }] }),

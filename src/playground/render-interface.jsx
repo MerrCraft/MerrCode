@@ -382,6 +382,7 @@ class Interface extends React.Component {
                                     </p>
                                 </div>
                             )}
+                            <h2>Winter update coming soon...</h2>
                             {/* remix info */}
                             {(extraProjectInfo.isRemix && remixedProjectInfo.loaded) && (
                                 <div className={styles.unsharedUpdate}>

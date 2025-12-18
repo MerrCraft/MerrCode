@@ -67,6 +67,40 @@ const messages = defineMessages({
     }
 });
 
+const UTList = [
+    'Minecraft is amazing!',
+    'Evil larry will come into your closet at night.',
+    'Why are you here, please, say hello for no reason',
+    'heheheh, i see you',
+    'freaky billy is watching you',
+    'I jumped into the amazing place',
+    'Do you like cats?',
+    'Who are reading dese tips?',
+    'I like turtles',
+    'Did you know? The earth is flat!',
+    'Why is the sky blue?',
+    'I love cats!',
+    'Did you know? you are special!',
+    'Why did the chicken cross the road?',
+    'I am watching you sleep',
+    'Do you like pancakes?',
+    'Why is water wet?',
+    'Have you ever seen a unicorn?',
+    'Do you believe in magic?',
+    'Why do we dream?',
+    'this was made by MerrCraft',
+    'Did you know? MerrCraft has made a lot of websites?',
+    'weird tips are weird',
+    'I am a loader tip',
+    'Loading the loading screen… loading the loading',
+    'there is a lot of these "tips", there are exactly {LENGTH} of them',
+    'eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+];
+
+// Replace the placeholder with the actual length
+UTList[25] = UTList[25].replace('{LENGTH}', UTList.length);
+let unhelpfulTip = UTList[Math.floor(Math.random() * UTList.length)]; // abrivated into UT for "unhelpful tips"
+
 class LoaderComponent extends React.Component {
     constructor (props) {
         super(props);
@@ -163,6 +197,9 @@ class LoaderComponent extends React.Component {
                             className={styles.messageContainerInner}
                             ref={this.messageRef}
                         />
+                    </div>
+                    <div>
+                        <div>{unhelpfulTip}</div>
                     </div>
                     {!isScratchDesktop() && (
                         <div className={styles.twProgressOuter}>
