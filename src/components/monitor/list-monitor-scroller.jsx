@@ -40,7 +40,7 @@ class ListMonitorScroller extends React.Component {
                 : item.toReporterContent
                     ? item.toReporterContent()
                     : item;
-        const value = (item === null ? false : item.isHTML)
+        const value = (item === null || item === undefined ? false : item.isHTML)
             ? (<DOMElementRenderer domElement={renderedValue} />)
             : String(item);
         return (
