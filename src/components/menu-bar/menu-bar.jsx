@@ -93,11 +93,6 @@ const ariaMessages = defineMessages({
         id: 'gui.menuBar.LanguageSelector',
         defaultMessage: 'language selector',
         description: 'accessibility text for the language selection menu'
-    },
-    tutorials: {
-        id: 'gui.menuBar.tutorialsLibrary',
-        defaultMessage: 'Tutorial',
-        description: 'accessibility text for the tutorials button'
     }
 });
 
@@ -958,13 +953,6 @@ class MenuBar extends React.Component {
                             />)
                             : (null)}
                     </div>
-                    <div className={classNames(styles.menuBarItem)}>
-                        {this.props.onOpenTutorial ? (
-                            <SeeInsideButton className={styles.menuBarButton} onClick={this.props.onOpenTutorial} iconSrc={fileUploadIcon}>
-                                <FormattedMessage {...ariaMessages.tutorials} />
-                            </SeeInsideButton>
-                        ) : null}
-                    </div>
 
                 </div>
 
@@ -1032,7 +1020,6 @@ MenuBar.propTypes = {
     onClickAddonSettings: PropTypes.func,
     onClickTheme: PropTypes.func,
     onClickPackager: PropTypes.func,
-    onOpenTutorial: PropTypes.func,
     onClickRestorePoints: PropTypes.func,
     onClickEdit: PropTypes.func,
     onClickFile: PropTypes.func,

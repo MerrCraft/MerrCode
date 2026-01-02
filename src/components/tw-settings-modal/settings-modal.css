@@ -1,5 +1,5 @@
 @import "../../css/colors.css";
-
+@import "../../css/units.css";
 .modal-content {
     max-width: max(60%, 750px);
 }
@@ -31,7 +31,7 @@
     flex-direction: column;
     padding: 0.5rem 1rem;
     margin: 0.25rem 0;
-    border-radius: 4px;
+    border-radius: calc($space * 2);
 }
 .setting.active {
     background: #dbebff;
@@ -103,7 +103,7 @@
 .custom-stage-size-button {
     margin: 8px;
     background: white;
-    border-radius: 10px;
+    border-radius: $space;
     font-size: 40px;
     width: 168px;
     height: 126px;

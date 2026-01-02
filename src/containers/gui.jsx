@@ -71,6 +71,20 @@ class GUI extends React.Component {
             console.log('the below error was caught by the gui');
             throw this.props.error;
         }
+        const welcomeModalContent = (
+            <div style={{ padding: '20px', "backgroundColor":"rgba(255, 255, 255, 0.7)"}}>
+                <h1>Welcome to MerrCode!</h1>
+                <p>HAPPY CHRISTMAS</p>
+                <p>This is a mod of PenguinMod that is a mod of Turbowarp Which is a mod of Scratch.</p>
+                <p>MerrCode adds features such as:</p>
+                <ul>
+                    <li>Extra UI</li>
+                    <li>Extra Features</li>
+                    <li>And More!</li>
+                </ul>
+                <i>Enjoy coding! :3</i>
+            </div>
+        );
         const {
             /* eslint-disable no-unused-vars */
             assetHost,
@@ -109,18 +123,7 @@ class GUI extends React.Component {
                     onRequestClose={() => this.setState({ showModal: false })}
                     styleContent={ {width: "700px"} }
                 >
-                    <div style={{ padding: '20px', "backgroundColor":"rgba(255, 255, 255, 0.7)"}}>
-                        <h1>Welcome to MerrCode!</h1>
-                        <p>HAPPY CHRISTMAS</p>
-                        <p>This is a mod of PenguinMod that is a mod of Turbowarp Which is a mod of Scratch.</p>
-                        <p>MerrCode adds features such as:</p>
-                        <ul>
-                            <li>Extra UI</li>
-                            <li>Extra Features</li>
-                            <li>And More!</li>
-                        </ul>
-                        <i>Enjoy coding! :3</i>
-                    </div>
+                    {welcomeModalContent}
                 </Modal>
             )}
             
