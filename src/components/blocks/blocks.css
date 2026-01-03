@@ -54,6 +54,8 @@
         same for Firefox, so a different solution may be needed for them.
     */
     -ms-overflow-style: none;
+    padding:3px;
+    border-radius: 1rem;
 }
 
 [dir="rtl"] .blocks :global(.blocklyToolboxDiv) {
@@ -68,6 +70,7 @@
 .blocks :global(.blocklyFlyout) {
     border-right: 1px solid $ui-black-transparent;
     box-sizing: content-box;
+    padding:3px;
 }
 
 [dir="rtl"] .blocks :global(.blocklyFlyout) {
