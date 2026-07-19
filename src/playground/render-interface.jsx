@@ -138,6 +138,7 @@ runAddons();
 
 const Footer = () => (
     <footer className={styles.footer}>
+<script src="https://keepandroidopen.org/banner.js"></script>
         <div className={styles.footerContent}>
             <div className={styles.footerText}>
                 <FormattedMessage
